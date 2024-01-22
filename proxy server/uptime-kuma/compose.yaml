@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  uptime-kuma:
+    image: louislam/uptime-kuma:1
+    restart: always
+    ports:
+      - 3001:3001
+    volumes:
+      - /home/mihandr/uptime-kuma:/app/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    
