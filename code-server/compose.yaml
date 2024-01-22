@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  code-server:
+    image: lscr.io/linuxserver/code-server:latest
+    restart: always
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - PROXY_DOMAIN=code.mihandr.ru
+      - PASSWORD=[secret]
+      - SUDO_PASSWORD=[secret]
+    volumes:
+      - ./:/config
+    ports:
+      - 8443:8443

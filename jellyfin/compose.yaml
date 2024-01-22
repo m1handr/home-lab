@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  jellyfin:
+    image: lscr.io/linuxserver/jellyfin:latest
+    restart: always
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Moscow
+    volumes:
+      - ./config:/config
+      - /home/media:/media
+    ports:
+      - 8096:8096

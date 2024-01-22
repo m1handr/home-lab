@@ -1,11 +1,10 @@
-version: "3.8"
+version: '3.8'
 services:
   mongodb:
     image: mongo:latest
+    restart: always
     ports:
       - 27017:27017
     volumes:
-      - /home/mongodb:/data/db
-    restart: always
-    
+      - ./data:/data/db
 # Also you can set password for you database, but I don't use that

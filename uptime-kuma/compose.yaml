@@ -1,4 +1,4 @@
-version: "3.3"
+version: '3.8'
 services:
   uptime-kuma:
     image: louislam/uptime-kuma:1
@@ -6,5 +6,5 @@ services:
     ports:
       - 3001:3001
     volumes:
-      - /home/mihandr/uptime-kuma:/app/data
+      - ./data:/app/data
       - /var/run/docker.sock:/var/run/docker.sock
