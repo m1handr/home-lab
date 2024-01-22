@@ -36,4 +36,6 @@ services:
     environment:
       - BASE_URL=https://stat.mihandr.ru
       - SECRET_KEY_BASE=[key]
+      # Use a command below to generate secret key
+      # openssl rand -base64 64 | tr -d '\n' ; echo
       - DISABLE_REGISTRATION=invite_only
