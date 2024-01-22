@@ -8,4 +8,3 @@ services:
     volumes:
       - /home/mihandr/uptime-kuma:/app/data
       - /var/run/docker.sock:/var/run/docker.sock
-    
